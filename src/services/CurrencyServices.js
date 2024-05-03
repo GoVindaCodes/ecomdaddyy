@@ -143,6 +143,7 @@ const CurrencyServices = {
   },
 
   updateManyCurrencies: async (body) => {
+    console.log("hi: ", body)
     return requests.patch('/api/currency/update/many', body);
   },
 

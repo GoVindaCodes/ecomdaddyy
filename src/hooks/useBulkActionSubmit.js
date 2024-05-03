@@ -125,7 +125,7 @@ const useBulkActionSubmit = (ids, lang = "en", childId) => {
       }
 
       if (location.pathname === "/currencies") {
-        const res = await CurrencyServices.updateManyCurrencies(currenciesData);
+        const res = await CurrencyServices.updateLiveExchangeRateStatus(currenciesData);
         setIsUpdate(true);
         notifySuccess(res.message);
         closeBulkDrawer();
